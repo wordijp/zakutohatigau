@@ -1,0 +1,40 @@
+env:
+  # ES6構文を許可する
+  # (IE11で未対応のアロー関数も許可してしまう)
+  es6: true
+  #node: true
+  # no-undefで$を許可する
+  jquery: true
+  # no-undefでブラウザ用グローバル変数を許可する
+  browser: true
+# 0: 無効
+# 1: 警告
+# 2: エラー
+rules:
+  indent:
+    - 0
+    - tab
+  linebreak-style:
+    - 1
+    - unix
+  semi:
+    - 1
+    - always
+  no-dupe-args:
+    - 2
+  no-dupe-keys:
+    - 2
+  no-duplicate-case:
+    - 2
+  no-redeclare:
+    - 1
+  no-unused-vars:
+    # グローバル関数も引っかかるので場合に応じて切り替え
+    - 1
+  block-scoped-var:
+    - 1
+  no-global-assign:
+    - 1
+  no-undef:
+    # グローバル定義も引っかかるので場合に応じて切り替え
+    - 0
